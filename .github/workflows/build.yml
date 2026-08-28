@@ -9,6 +9,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: read  # 允许读取 packages
 
     steps:
       - name: Checkout repository with submodules
