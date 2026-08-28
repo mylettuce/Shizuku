@@ -25,6 +25,13 @@ dependencyResolutionManagement {
                 includeGroup("com.github.topjohnwu.libsu")
             }
         }
+        maven {
+            url = uri("https://maven.pkg.github.com/RikkaApps/HiddenApiRefine")
+            credentials {
+                username = System.getenv("GITHUB_ACTOR") ?: "token"
+                password = System.getenv("GITHUB_TOKEN") ?: ""
+            }
+        }
     }
     versionCatalogs {
         libs {
